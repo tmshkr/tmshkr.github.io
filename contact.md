@@ -16,8 +16,6 @@ permalink: /contact/
 }
 @media screen and (max-width:360px) {
   .social a {
-    color: #fff;
-    padding: 0.33em;
     font-size: 1.5em;
   }   
 }
