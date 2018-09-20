@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+
+  <nav id="navbar" class="drawer-closed">
+    <div class="container">
+      <a href="{{ site.baseurl }}/" id="navbar-title">{{ site.title }}</a>
+      <a href="#" id="indicator"><span></span></a>
+      <ul>
+          <li><a href="{{ "/about" | prepend: site.baseurl }}">About</a></li>
+          <li><a href="{{ site.baseurl }}/">Blog</a></li>
+          <li><a href="{{ "/contact" | prepend: site.baseurl }}/">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main role="main">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer>
+    <span>
+       <a href="/copyright"><time datetime="{{ site.time }}">&copy; {{ site.time | date: '%Y' }}</time></a>
+    </span>
+  </footer>
+  <noscript>
+    <style type="text/css">
+      #navbar {
+        position: static;
+      }
+      #menu-drawer {
+        display: block;
+      }
+    </style>
+  </noscript>
+  <script src="/js/main.js"></script>
+</body>
+
+</html>

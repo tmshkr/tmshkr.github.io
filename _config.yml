@@ -1,0 +1,21 @@
+# Site settings
+title:          tmshkr
+description:    "Tim Shaker"
+
+# Build settings
+markdown:       kramdown
+
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        compressed
+
+# Gems
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  # - jemoji #Uncomment this to allow emoji in your post
+
+# Permalinks
+permalink:      blog/:title
+paginate:       5
