@@ -41,9 +41,12 @@
 
   p {
     margin: 1em 0;
-    // text-align: justify;
   }
 
+  a, a:visited {
+    color: $link;
+  }
+  
   a:hover {
     text-decoration: underline;
   }
