@@ -39,7 +39,7 @@ need to do something. Accordingly, it will hide or reveal the navbar by moving i
 into or out of the user's viewport, only when the appropriate conditions are satisfied. 
 
 One of these conditions is that the difference between the user's previous and current
-scroll positions is greater than the `scrollBuffer`, to ignore slower scrolling.
+scroll positions must be greater than the `scrollBuffer`, to ignore slower scrolling.
 This makes it less sensitive to smaller movements, so that it only does something
 when the user is quickly scrolling up or down, and not from a small random swipe.
 In this way, it improves the user's experience by not having the navbar pop back into the
@@ -56,7 +56,7 @@ the screen to open the menu when using a smartphone with the left hand.
 
 To improve performance, `autoHideNavbar` is then passed as a callback function to `setTimeout` or
 `requestAnimationFrame` with a ternary operator, every time the user scrolls,
-so that it uses the approriate method when the browser supports it.
+so that it uses the appropriate method when the browser supports it.
 This increases performance by throttling the script with `setTimeout` or allowing
 the browser to handle the script with `requestAnimationFrame`. `window.onscroll`
 executes very rapidly (once for every tiny scroll movement the user makes).
