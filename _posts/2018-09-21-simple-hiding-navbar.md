@@ -32,11 +32,11 @@ up a bit.
 
 It's based on these examples from [w3schools](https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp)
 and [CodyHouse](https://codyhouse.co/gem/auto-hiding-navigation). I took the best
-of these two examples and made a simple Vanilla JS implementation, with only the essential parts.
+of these two scripts and made a simple Vanilla JS implementation, with only the essential parts.
 It uses a `visible` boolean, so that it can keep track of the navbar's state,
 in order to have the `if` and `else if` codeblocks execute ***if and only if*** they
 need to do something. Accordingly, it will hide or reveal the navbar by moving it
-into or out of the user's viewport, only when the approriate conditions are satisfied. 
+into or out of the user's viewport, only when the appropriate conditions are satisfied. 
 
 One of these conditions is that the difference between the user's previous and current
 scroll positions is greater than the `scrollBuffer`, to ignore slower scrolling.
