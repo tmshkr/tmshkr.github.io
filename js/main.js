@@ -5,7 +5,7 @@
 var navbar = document.getElementById('navbar');
 var visible = true;
 var drawerOpen = false;
-var scrollBuffer = 10;
+var scrollBuffer = 20;
 var pageTop;
 var prevScrollPos = window.pageYOffset;
 var mediaMatches;
