@@ -7,7 +7,6 @@ code {
   background-color: $grey-3;
   border-radius: 3px;
   color: $code-color;
-  font-size: .9em;
   padding: .25em .5em;
 }
 
@@ -17,7 +16,7 @@ pre {
 
 pre code {
   background-color: transparent;
-  font-size: .9em;
+  font-size: 18px;
   padding: 0;
 }
 
@@ -84,4 +83,16 @@ div.highlight, figure.highlight {
     position: absolute;
     right: 0.75em;
     bottom: 0.5em;
+}
+
+@media screen and (max-width:960px) {
+  .full-width pre code {
+    font-size: 1.875vw;
+  }
+}
+
+@media screen and (max-width:640px) {
+  .full-width pre code {
+    font-size: 12px;
+  }
 }
