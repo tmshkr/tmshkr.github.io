@@ -5,7 +5,6 @@
 var navbar = document.getElementById('navbar');
 var visible = true;
 var drawerOpen = false;
-var scrollBuffer = 20;
 var pageTop;
 var prevScrollPos = window.pageYOffset;
 var mediaMatches;
@@ -14,12 +13,12 @@ var mediaMatches;
 function autoHideNavbar() {
 	let currentScrollPos = window.pageYOffset;
 	//scrolling up
-	if (!visible && prevScrollPos - currentScrollPos > scrollBuffer) {
+	if (!visible && prevScrollPos - currentScrollPos > 40) {
 		navbar.style.transform = 'translateY(0)';
 		visible = true;
 	}
 	//scrolling down
-	else if (visible && currentScrollPos - prevScrollPos > scrollBuffer && currentScrollPos > pageTop) {
+	else if (visible && currentScrollPos - prevScrollPos > 20 && currentScrollPos > pageTop) {
 		navbar.style.transform = 'translateY(-100%)';
 		visible = false;
 	}
