@@ -61,7 +61,7 @@ This increases performance by throttling the script with `setTimeout` or allowin
 the browser to handle the script with `requestAnimationFrame`. `window.onscroll`
 executes very rapidly (once for every tiny scroll movement the user makes).
 To get an idea of how many times it gets called, try
-putting `console.log(currentScrollPos)` right after its declared in the function.
+putting `console.log(currentScrollPos)` right after it's declared in the function.
 
 Clearly, there are a multitude of things that must be considered when writing code
 for the web, with the many and diverse devices and users that may visit your page.
