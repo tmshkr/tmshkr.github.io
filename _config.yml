@@ -13,6 +13,7 @@ sass:
 # Gems
 plugins:
   - jekyll-feed
+  - jekyll-octicons
   - jekyll-paginate
   # - jemoji #Uncomment this to allow emoji in your post
 

@@ -7,7 +7,7 @@ code {
   background-color: $grey-3;
   border-radius: 3px;
   color: $code-color;
-  font-size: 85%;
+  font-size: .9em;
   padding: .25em .5em;
 }
 
@@ -17,12 +17,11 @@ pre {
 
 pre code {
   background-color: transparent;
-  font-size: 100%;
+  font-size: .9em;
   padding: 0;
 }
 
 div.highlight, figure.highlight {
-  resize: both;
   overflow: auto;
 }
 
@@ -47,4 +46,42 @@ div.highlight, figure.highlight {
        -moz-user-select: none;
             user-select: none;
   }
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.full-width div.highlight {
+  text-align: center;
+}
+
+.full-width div.highlight pre.highlight {
+  display: inline-block;
+  text-align: left;
+}
+
+.fas.fa-expand { //font awesome expand icon
+  float: right;
+  font-size: 1.2em;
+  padding: 0.25em 0.5em;
+  opacity: 0.5;
+  cursor: pointer;
+  @include transition(opacity 0.5s);
+}
+
+.fas.fa-expand:hover,
+.fas.fa-expand:focus {
+  opacity: 1;
+}
+
+.full-width .fas.fa-expand {
+    position: absolute;
+    right: 0.75em;
+    bottom: 0.5em;
 }

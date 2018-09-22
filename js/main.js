@@ -1,4 +1,3 @@
-
 //  Acknowledgements
 //  https://codyhouse.co/gem/auto-hiding-navigation
 //  https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
@@ -13,13 +12,13 @@ var mediaMatches;
 
 
 function autoHideNavbar() {
-	var currentScrollPos = window.pageYOffset;
-  //scrolling up
+	let currentScrollPos = window.pageYOffset;
+	//scrolling up
 	if (!visible && prevScrollPos - currentScrollPos > scrollBuffer) {
 		navbar.style.transform = 'translateY(0)';
 		visible = true;
 	}
-  //scrolling down
+	//scrolling down
 	else if (visible && currentScrollPos - prevScrollPos > scrollBuffer && currentScrollPos > pageTop) {
 		navbar.style.transform = 'translateY(-100%)';
 		visible = false;
@@ -32,23 +31,23 @@ function getPageTop() {
 }
 
 function mediaMatch() {
-  mediaMatches = window.matchMedia('(max-width: 600px)').matches;
+	mediaMatches = window.matchMedia('(max-width: 600px)').matches;
 }
 
 function openDrawer() {
 	navbar.className = 'drawer-open';
-  document.documentElement.style.cursor = 'pointer';
+	document.documentElement.style.cursor = 'pointer';
 	drawerOpen = true;
 }
 
 function closeDrawer() {
 	navbar.className = 'drawer-closed';
-  document.documentElement.style.cursor = null;
+	document.documentElement.style.cursor = null;
 	drawerOpen = false;
 }
 
 function toggleDrawer() {
-	(drawerOpen) ? closeDrawer() : openDrawer();
+	(drawerOpen) ? closeDrawer(): openDrawer();
 }
 
 getPageTop();
@@ -56,15 +55,15 @@ mediaMatch();
 
 window.onscroll = function() {
 	(!window.requestAnimationFrame) ?
-	setTimeout(autoHideNavbar, 250) :
+	setTimeout(autoHideNavbar, 250):
 	requestAnimationFrame(autoHideNavbar);
 }
 
-if (mediaMatches || mediaMatches === undefined){
-  navbar.onclick = function(event) {
-    toggleDrawer();
-    event.cancelBubble = true;
-  }
+if (mediaMatches || mediaMatches === undefined) {
+	navbar.onclick = function(event) {
+		toggleDrawer();
+		event.cancelBubble = true;
+	}
 }
 
 document.onclick = closeDrawer;
@@ -73,21 +72,44 @@ document.getElementById('navbar-title').onclick = function(event) {
 }
 
 window.onresize = function() {
-  getPageTop();
-  mediaMatch();
-  if (!mediaMatches) {
-    navbar.onclick = null;
-    closeDrawer();
-  }
-  else if (mediaMatches)
-    navbar.onclick = function(event) {
-      toggleDrawer();
-      event.cancelBubble = true;
-  }
+	getPageTop();
+	mediaMatch();
+	if (!mediaMatches) {
+		navbar.onclick = null;
+		closeDrawer();
+	}
+	else if (mediaMatches)
+		navbar.onclick = function(event) {
+			toggleDrawer();
+			event.cancelBubble = true;
+		}
 }
 
 const navLinks = document.querySelectorAll("nav li a")
-navLinks.forEach(function(node){
-	node.ontouchstart = function() { this.style.backgroundColor = "#3b414e" }
-	node.ontouchend = function() { this.style.backgroundColor = "" }
+navLinks.forEach(function(el) {
+	el.ontouchstart = function() { this.style.backgroundColor = "#3b414e" }
+	el.ontouchend = function() { this.style.backgroundColor = "" }
+})
+
+function isOverflowingX(el) {
+	return el.clientWidth < el.scrollWidth
+}
+
+const codeViews = document.querySelectorAll("div.highlight, figure.highlight")
+codeViews.forEach(function(el) {
+
+	if (isOverflowingX(el.firstElementChild)) {
+		el.parentElement.classList.add("full-width")
+
+
+
+		// let icon = document.createElement("i")
+		// icon.className = "fas fa-expand"
+		// el.appendChild(icon)
+		// icon.onclick = function() {
+		// 	el.parentElement.classList.contains("full-width") ?
+		// 	el.parentElement.classList.remove("full-width") :
+		// 	el.parentElement.classList.add("full-width")
+		// }
+	}
 })

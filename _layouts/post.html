@@ -8,6 +8,9 @@ layout: default
   {% if page.subtitle %}
   <h2 class="post-subtitle">{{ page.subtitle }}</h2>
   {% endif %}
+  {% if page.github %}
+  <h3 class="post-repo"><a href="https://github.com/tmshkr/{{ page.github }}" target="_blank">{% octicon repo %}{{ page.github }}</a></h3>
+  {% endif %}
   <div class="post-line"></div>
 
   {{ content }}

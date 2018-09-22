@@ -1,4 +1,4 @@
-nav {
+nav { //TODO: clean up SASS
   color: #fff;
   background-color: $background-color;
   opacity: 0.9;
@@ -8,6 +8,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
   @include transition(all 0.5s);
 }
 
