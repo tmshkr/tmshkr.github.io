@@ -13,12 +13,12 @@ the top of the screen when the user scrolls down:
 function autoHideNavbar() {
 	let currentScrollPos = window.pageYOffset;
     //scrolling up
-	if (!visible && prevScrollPos - currentScrollPos > scrollBuffer) {
+	if (!visible && prevScrollPos - currentScrollPos > 40) {
 		navbar.style.transform = 'translateY(0)';
 		visible = true;
 	}
     //scrolling down
-	else if (visible && currentScrollPos - prevScrollPos > scrollBuffer) {
+	else if (visible && currentScrollPos - prevScrollPos > 20) {
 		navbar.style.transform = 'translateY(-100%)';
 		visible = false;
 	}
@@ -39,24 +39,26 @@ need to do something. Accordingly, it will hide or reveal the navbar by moving i
 into or out of the user's viewport, only when the appropriate conditions are satisfied. 
 
 One of these conditions is that the difference between the user's previous and current
-scroll positions must be greater than the `scrollBuffer`, to ignore slower scrolling.
+scroll positions must be greater than a predetermined buffer, to ignore slower scrolling.
 This makes it less sensitive to smaller movements, so that it only does something
 when the user is quickly scrolling up or down, and not from a small random swipe.
-In this way, it improves the user's experience by not having the navbar pop back into the
-viewport when they didn't mean to scroll up, or when they only wanted to scroll up
-a bit to view something earlier in the page.
+In this way, it improves the user's experience by not having the navbar get in the
+way when they didn't mean to scroll up, or when they only wanted to scroll up
+a bit to view something earlier in the page. The buffers for scrolling up or down
+are set to different values, so that it gets out of the way easily, and only
+pops back into view when the user wants it to.
 
 The navbar is also responsive, so that the links collapse into a hamburger menu
 for smaller screen sizes. Notably, most of the navbar serves as the button to toggle
 it open or closed, while the functionality of the anchor tag enclosing the navbar's
 title remains the same. Doing things this way makes it easier to open or close the
 navbar, so that users don't have to tap precisely on the small hamburger button
-(which can often be frustrating). It also makes it so that it isn't necessary to reach all the way across
+(which can often be frustrating). It also makes it unnecessary to reach all the way across
 the screen to open the menu when using a smartphone with the left hand.
 
 To improve performance, `autoHideNavbar` is then passed as a callback function to `setTimeout` or
 `requestAnimationFrame` with a ternary operator, every time the user scrolls,
-so that it uses the appropriate method when the browser supports it.
+so that it uses the appropriate method if the browser supports it.
 This increases performance by throttling the script with `setTimeout` or allowing
 the browser to handle the script with `requestAnimationFrame`. `window.onscroll`
 executes very rapidly (once for every tiny scroll movement the user makes).
