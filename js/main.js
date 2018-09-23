@@ -13,13 +13,23 @@ var mediaMatches;
 function autoHideNavbar() {
 	let currentScrollPos = window.pageYOffset;
 	//scrolling up
-	if (!visible && prevScrollPos - currentScrollPos > 40) {
-		navbar.style.transform = 'translateY(0)';
+	if (!visible && prevScrollPos - currentScrollPos > 40 ||
+		!visible && currentScrollPos < pageTop) {
+		(!window.requestAnimationFrame) ?
+		navbar.style.transform = 'translateY(0)' :
+			requestAnimationFrame(function() {
+				navbar.style.transform = 'translateY(0)';
+			});
 		visible = true;
 	}
 	//scrolling down
-	else if (visible && currentScrollPos - prevScrollPos > 20 && currentScrollPos > pageTop) {
-		navbar.style.transform = 'translateY(-100%)';
+	else if (visible && currentScrollPos - prevScrollPos > 20 &&
+		currentScrollPos > pageTop) {
+		(!window.requestAnimationFrame) ?
+		navbar.style.transform = 'translateY(-100%)' :
+			requestAnimationFrame(function() {
+				navbar.style.transform = 'translateY(-100%)';
+			});
 		visible = false;
 	}
 	prevScrollPos = currentScrollPos;
@@ -52,11 +62,7 @@ function toggleDrawer() {
 getPageTop();
 mediaMatch();
 
-window.onscroll = function() {
-	(!window.requestAnimationFrame) ?
-	setTimeout(autoHideNavbar, 250):
-	requestAnimationFrame(autoHideNavbar);
-}
+window.onscroll = autoHideNavbar;
 
 if (mediaMatches || mediaMatches === undefined) {
 	navbar.onclick = function(event) {
@@ -99,16 +105,5 @@ codeViews.forEach(function(el) {
 
 	if (isOverflowingX(el.firstElementChild)) {
 		el.parentElement.classList.add("full-width")
-
-
-
-		// let icon = document.createElement("i")
-		// icon.className = "fas fa-expand"
-		// el.appendChild(icon)
-		// icon.onclick = function() {
-		// 	el.parentElement.classList.contains("full-width") ?
-		// 	el.parentElement.classList.remove("full-width") :
-		// 	el.parentElement.classList.add("full-width")
-		// }
 	}
 })
