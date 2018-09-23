@@ -38,9 +38,12 @@
     margin: .33em auto;
     text-align: center;
 
-    a,
-    a:visited {
+    a, a:visited {
       color: $default-shade;
+    }
+    
+    a:hover, a:focus {
+      color: #fff;
     }
 
     svg {
@@ -67,12 +70,11 @@
     margin: 1em 0;
   }
 
-  a,
-  a:visited {
+  a, a:visited {
     color: $link;
   }
 
-  a:hover {
+  a:hover, a:focus {
     text-decoration: underline;
   }
 
