@@ -64,7 +64,7 @@ To improve performance, the animation for hiding or revealing the navbar is hand
 by `requestAnimationFrame` if the browser supports it, as determined by a ternary operator.
 This ensures that the CSS animation begins when the browser is ready for it.
 
-The navbar is also responsive, so that the links collapse into a hamburger menu
+The navbar is also responsive, so that the links collapse into a dropdown menu
 for smaller screen sizes. Notably, most of the navbar serves as the button to toggle
 it open or closed, while the functionality of the anchor tag enclosing the navbar's
 title remains the same. Doing things this way makes it easier to open or close the
