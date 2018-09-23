@@ -43,21 +43,21 @@ up a bit.
 It's based on these examples from [w3schools](https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp)
 and [CodyHouse](https://codyhouse.co/gem/auto-hiding-navigation). I took the best
 of these two scripts and made a simple Vanilla JS implementation, with only the essential parts.
-It uses a global `visible` boolean, so that it can keep track of the navbar's state,
-in order to have the `if` and `else if` codeblocks execute ***if and only if*** they
-need to do something. Accordingly, it will hide or reveal the navbar by moving it
-into or out of the user's viewport, only when the appropriate conditions are satisfied. 
+It uses the `visible` boolean, declared outside of the function, to keep track of the navbar's state
+so that the `if` and `else if` codeblocks execute ***if and only if*** they
+need to do something. Accordingly, it will update the DOM only when the appropriate
+conditions are satisfied. 
 
 One of these conditions is that the difference between the user's previous and current
 scroll positions must be greater than a predetermined buffer, to ignore slower scrolling.
 This makes it less sensitive to smaller movements, so that it only does something
 when the user is quickly scrolling up or down, and not from a small random swipe.
-In this way, it improves the user's experience by not having the navbar get in the
+The scroll buffer improves the user's experience by not having the navbar get in the
 way when they didn't mean to scroll up, or when they only wanted to scroll up
 a bit to view something earlier in the page. The buffers for scrolling up or down
 are set to different values, so that it gets out of the way easily, and only
 pops back into view when the user wants it to. `pageTop` is set equal to 1/4 the
-height of the window, so that the navbar is visible when scrolling near the
+height of the window, so that the navbar is always visible when scrolling near the
 top of the page.
 
 To improve performance, the animation for hiding or revealing the navbar is handled
@@ -75,4 +75,4 @@ the screen to open the menu when using a smartphone with the left hand.
 Clearly, there are a multitude of things that must be considered when writing code
 for the web, with the many and diverse devices and users that may visit your page.
 Even a seemingly simple component, like a navbar, requires thoughtful deliberation
-and execution in order to provide the best possible user experience.
+and careful execution in order to provide the best possible user experience.
