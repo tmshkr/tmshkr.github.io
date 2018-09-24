@@ -13,7 +13,7 @@ the top of the screen when the user scrolls down:
 function autoHideNavbar() {
 	let currentScrollPos = window.pageYOffset;
 	//scrolling up
-	if (!visible && prevScrollPos - currentScrollPos > 40 ||
+	if (!visible && prevScrollPos - currentScrollPos > 30 ||
 		!visible && currentScrollPos < pageTop) {
 		(!window.requestAnimationFrame) ?
 		navbar.style.transform = 'translateY(0)' :
@@ -23,7 +23,7 @@ function autoHideNavbar() {
 		visible = true;
 	}
 	//scrolling down
-	else if (visible && currentScrollPos - prevScrollPos > 20 &&
+	else if (visible && currentScrollPos - prevScrollPos > 10 &&
 		currentScrollPos > pageTop) {
 		(!window.requestAnimationFrame) ?
 		navbar.style.transform = 'translateY(-100%)' :
