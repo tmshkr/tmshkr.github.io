@@ -49,6 +49,18 @@ rect.bar {
 #tooltip text {
   display: block;
 }
+
+@media screen and (max-width: 960px) {
+  .post {
+  overflow-x: hidden;
+  }
+  #gdp div {
+    overflow-x: scroll;
+  }
+  #gdp svg {
+  transform: none;
+}
+}
 </style>
 <div id="gdp">
   <h1 id="title">United States GDP</h1>
@@ -61,6 +73,7 @@ rect.bar {
 const width = 800;
 const height = 500;
 var svg = d3.select("#gdp")
+            .append("div")
             .append("svg")
             .attr("width", width + 60)
             .attr("height", height + 20);
