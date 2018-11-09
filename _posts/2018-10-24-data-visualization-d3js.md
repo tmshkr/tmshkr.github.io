@@ -13,7 +13,7 @@ Certification program offered by [freeCodeCamp](https://learn.freecodecamp.org/)
 <img src="../assets/blog/images/fcc-dataviz-cert.png" />
 </a>
 
-Data visualization is simply the graphical representation of information, e.g.,
+Data visualization is simply the visual representation of information, e.g.,
 charts, graphs, tables, and so forth, which makes it easier for humans to interpret
 and reason about data in order to make informed decisions. For example, one might
 reasonably assume that the upward trend in GDP, which has lasted for over 65 years
