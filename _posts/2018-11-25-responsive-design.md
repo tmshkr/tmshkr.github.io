@@ -27,7 +27,7 @@ As the popular analogy goes, if a webpage is a house, then HTML is the
 wooden frame, while CSS is the drywall and the paint. Like any good carpenter, one
 could spend years mastering just these two techniques to be able to create some
 truly amazing designs. With new HTML and CSS features continuing to be implemented,
-there is always something to learn, as new features gaining wider browser support.
+there's always something to learn, as new features gain wider browser support.
 
 Flexbox and CSS grid are two more recent CSS features that I had shied away
 from before, due to the spotty browser support, but they are now [widely](https://caniuse.com/#feat=flexbox) [supported](https://caniuse.com/#feat=css-grid)
