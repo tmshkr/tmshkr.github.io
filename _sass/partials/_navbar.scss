@@ -9,7 +9,7 @@ nav { //TODO: clean up SASS
   left: 0;
   right: 0;
   z-index: 1;
-  @include transition(all 0.5s);
+  @include transition(transform 0.5s);
 }
 
 nav .container {
