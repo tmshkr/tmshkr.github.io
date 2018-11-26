@@ -8,10 +8,10 @@
   <nav id="navbar" class="drawer-closed">
     <div class="container">
       <a href="{{ site.baseurl }}/" id="navbar-title">{{ site.title }}</a>
-      <a tabindex="0" id="indicator"><span></span></a>
+      <a href="javascript:void(0)" id="indicator"><span></span></a>
       <ul>
-          <li><a href="{{ "/about" | prepend: site.baseurl }}">About</a></li>
-          <li><a href="{{ site.baseurl }}/">Blog</a></li>
+          <li><a href="{{ "/about" | prepend: site.baseurl }}/">About</a></li>
+          <li><a href="{{ "" | prepend: site.baseurl }}/">Blog</a></li>
           <li><a href="{{ "/contact" | prepend: site.baseurl }}/">Contact</a></li>
       </ul>
     </div>
@@ -33,7 +33,7 @@
       #navbar{position:absolute}#navbar ul{display:block}@media screen and (max-width:600px){#indicator{display:none}main{margin-top:20em}}
     </style>
   </noscript>
-  <script src="/js/main.js"></script>
+  <script src="{{ "/js/main.js" | relative_url }}"></script>
 </body>
 
 </html>

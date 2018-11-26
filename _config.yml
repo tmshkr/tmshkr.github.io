@@ -1,6 +1,8 @@
 # Site settings
 title:          tmshkr
-description:    "Tim Shaker"
+author:         "Tim Shaker"
+description:    "Tim Shaker is a designer/developer based in Orange County, California."
+
 
 # Build settings
 markdown:       kramdown
@@ -15,8 +17,10 @@ plugins:
   - jekyll-feed
   - jekyll-octicons
   - jekyll-paginate
+  - jekyll-seo-tag
   # - jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
-permalink:      blog/:title
+# paginate_path:  /blog/:num/
+permalink:      /blog/:title
 paginate:       5
