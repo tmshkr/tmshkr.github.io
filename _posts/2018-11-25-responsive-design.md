@@ -26,7 +26,7 @@ into CSS and visual design, which gives a webpage its look and feel.
 As the popular analogy goes, if a website is a house, then HTML is the
 wooden frame, while CSS is the drywall and the paint. Like any good carpenter, one
 could spend years mastering just these two techniques to be able to create some
-truly amazing designs. With new HTML and CSS features continuosly being implemented,
+truly amazing designs. With new HTML and CSS features continuously being implemented,
 there's always something to learn, as new features gain wider browser support.
 
 Flexbox and CSS grid are two (relatively) recent CSS features that I had shied away
