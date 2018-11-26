@@ -29,7 +29,7 @@ could spend years mastering just these two techniques to be able to create some
 truly amazing designs. With new HTML and CSS features continuosly being implemented,
 there's always something to learn, as new features gain wider browser support.
 
-Flexbox and CSS grid are two more recent CSS features that I had shied away
+Flexbox and CSS grid are two (relatively) recent CSS features that I had shied away
 from before, due to the spotty browser support, but they are now [widely](https://caniuse.com/#feat=flexbox) [supported](https://caniuse.com/#feat=css-grid)
 by Chrome, Safari, Firefox, and Edge --- with Internet Explorer being discontinued,
 there isn't much of a reason to avoid using these extremely useful features that make frontend
