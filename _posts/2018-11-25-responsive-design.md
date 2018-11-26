@@ -31,7 +31,7 @@ there's always something to learn, as new features gain wider browser support.
 
 Flexbox and CSS grid are two (relatively) recent CSS features that I had shied away
 from before, due to the spotty browser support, but they are now [widely](https://caniuse.com/#feat=flexbox) [supported](https://caniuse.com/#feat=css-grid)
-by Chrome, Safari, Firefox, and Edge --- with Internet Explorer being discontinued,
+by Chrome, Safari, Firefox, and Edge. With Internet Explorer being discontinued,
 there isn't much of a reason to avoid using these extremely useful features that make frontend
 development easier, better, and more concise.
 
@@ -64,7 +64,7 @@ Perfectly Centered
 ```
 
 The projects for the Responsive Web Design certification program were where most
-of the learning happened, as I got to practice making layouts with CSS Grid, Flexbox,
+of my learning happened, as I got to practice making layouts with CSS Grid, Flexbox,
 and other responsive web design techniques. The projects I made are available to view and fork
 on my [Codepen profile](https://codepen.io/tmshkr/): a [tribute page](https://codepen.io/tmshkr/pen/vVXOvV), a [survey form](https://codepen.io/tmshkr/pen/QZPXew),
 a [product landing page](https://codepen.io/tmshkr/pen/MPdymB), a [technical documentation page](https://codepen.io/tmshkr/pen/oaKzNW),
@@ -72,12 +72,23 @@ and a [personal portfolio webpage](https://codepen.io/tmshkr/pen/vQEmJj).
 
 The certification program also went into accessibility techniques, which help users
 with visual impairments to better access content on a website through screen readers and
-high-contrast text. Accessibility best practices aren't always obvious to sighted
-designers and developers who are used to a website being mainly a visual project,
+high-contrast text. Accessibility concerns aren't always obvious to
+designers and developers who consider a website to be mainly a visual project,
 so it was helpful to practice with these techniques. I often find myself using the
 accessibility tools [Read Aloud](https://addon.readaloud.app/) and [Dark Reader](https://darkreader.org/)
 because they make text easier to read, especially when reading long passages
-of text on a screen all day. Technology empowers users with a potentially limitless
-amount of ways to do things, which can be a blessing when it helps but a curse
-when there is no clear solution. Experience tends to be the best guide in those
+of text on a screen all day. For some reason, black text on a blinding-white screen
+became the norm for websites and user interfaces more broadly. Perhaps the designers
+of word processors and the first websites tried to emulate the experience of reading printed text on white paper
+--- but as anyone who has spent enough time staring at a computer screen knows,
+this can quickly lead to eyestrain.
+
+Technology empowers users with a potentially limitless amount of ways to do things,
+so there is no real reason, for example, to have a website with a light background
+instead of a dark one --- besides the norms that have been inherited and the preferences
+of the users. This seemingly limitless freedom can be both a blessing and a curse:
+when it helps, a novel solution to a problem can enrich our lives in ways we could
+not imagine before, but when there is no obvious solution, the limitless possibilites
+presented by technology can be a barrier to moving forward, towards a goal which
+is not clearly defined. Experience tends to be the best guide in those
 kinds of situations.
