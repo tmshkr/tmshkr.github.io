@@ -88,7 +88,7 @@ so there is no real reason, for example, to have a website with a light backgrou
 instead of a dark one --- besides the norms that have been inherited and the preferences
 of the users. This seemingly limitless freedom can be both a blessing and a curse:
 when it helps, a novel solution to a problem can enrich our lives in ways we could
-not imagine before, but when there is no obvious solution, the limitless possibilites
+not imagine before, but when there is no obvious solution, the limitless possibilities
 presented by technology can be a barrier to moving forward, towards a goal which
 is not clearly defined. Experience tends to be the best guide in those
 kinds of situations.
