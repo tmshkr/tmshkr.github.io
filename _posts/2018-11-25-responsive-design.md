@@ -36,7 +36,7 @@ it often doesn't make sense to avoid using these extremely useful features that 
 design easier, better, and more concise.
 
 Centering content, for example, once involved all sorts of strange hacks, like negative margins and transforms
---- vertical centering was frustrating if not impossible. Now one all one needs to do is
+--- vertical centering was frustrating if not impossible. Now all one needs to do is
 merely `display` the parent container as a `grid` in order to `justify` and `align`
 content to the `center`.
 
