@@ -32,8 +32,8 @@ there's always something to learn, as new features gain wider browser support.
 Flexbox and CSS grid are two more recent CSS features that I had shied away
 from before, due to the spotty browser support, but they are now [widely](https://caniuse.com/#feat=flexbox) [supported](https://caniuse.com/#feat=css-grid)
 by Chrome, Safari, Firefox, and Edge --- with Internet Explorer being discontinued,
-it often doesn't make sense to avoid using these extremely useful features that make frontend
-design easier, better, and more concise.
+there isn't much of a reason to avoid using these extremely useful features that make frontend
+development easier, better, and more concise.
 
 Centering content, for example, once involved all sorts of strange hacks, like negative margins and transforms
 --- vertical centering was frustrating if not impossible. Now all one needs to do is
@@ -50,7 +50,7 @@ content to the `center`.
 }
 </style>
 
-<div class="perfect-center">
+<div class="perfect-center full-width-mobile">
 Perfectly Centered
 </div>
 

@@ -96,4 +96,21 @@ div.highlight, figure.highlight {
   .full-width pre code {
     font-size: 12px;
   }
+  
+  .full-width-mobile {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+  [class^="language-"] {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  }
 }
