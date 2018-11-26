@@ -21,9 +21,9 @@ have now successfully completed:
 </a>
 
 The program started off with a basic introduction to HTML, which is always good to
-revisit, since these are the fundamental building blocks of a webpage. It then transitioned
+revisit, since these are the fundamental building blocks of a website. It then transitioned
 into CSS and visual design, which gives a webpage its look and feel.
-As the popular analogy goes, if a webpage is a house, then HTML is the
+As the popular analogy goes, if a website is a house, then HTML is the
 wooden frame, while CSS is the drywall and the paint. Like any good carpenter, one
 could spend years mastering just these two techniques to be able to create some
 truly amazing designs. With new HTML and CSS features continuing to be implemented,
