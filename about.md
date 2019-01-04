@@ -13,7 +13,6 @@ This blog will be updated and maintained according to my interests, which includ
 * Web Development
 * Mobile Development
 * JavaScript
-* Ruby
 * React
 * User Experience
 * and more!
