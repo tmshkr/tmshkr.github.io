@@ -18,6 +18,7 @@ plugins:
   - jekyll-octicons
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-redirect-from
   # - jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
